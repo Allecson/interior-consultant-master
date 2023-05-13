@@ -7,19 +7,34 @@
     <link rel="stylesheet" href="./css/style.css" />
     <title>Interior Consultant</title>
     <link rel="shortcut icon" href="devchallenges.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header class="header">
-      
       <nav class="nav_bar">
         <p class="nav_p"><a href="#">this Interior</a></p>
         <ul class="ul">
-          <li class="li"><a href="#">Home</a></li>
-          <li class="li"><a href="#">Collection</a></li>
-          <li class="li"><a href="#">About</a></li>
-          <li class="li"><a href="#">Contact</a></li>
+          <li class="li"><a class="nav_a" href="#">Home</a></li>
+          <li class="li"><a class="nav_a" href="#">Collection</a></li>
+          <li class="li"><a class="nav_a" href="#">About</a></li>
+          <li class="li"><a class="nav_a" href="#">Contact</a></li>
         </ul>
+        <div class="btn_menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </nav>
+      <div class="menu_mobile">
+        <li ><a class="nav_a" href="#">Home</a></li>
+        <li ><a class="nav_a" href="#">Collection</a></li>
+        <li ><a class="nav_a" href="#">About</a></li>
+        <li ><a class="nav_a" href="#">Contact</a></li>
+      </div>
     </header>
     <main class="main">
       <div class="h1_p">
@@ -39,35 +54,39 @@
           alt="interior de uma casa"
         />
         <div class="back">
-        <div class="perfil">
-          <img
-            class="img_perfil"
-            src="photo2.png"
-            width="85px"
-            height="72px"
-            alt="Aliza Webber"
-          />
-        <div>
-          <p class="p1_perfil">Aliza Webber</p>
-          <p class="p2_perfil">Interior Designer</p>
-        </div>
-        </div>
-        <div>
+          <div class="perfil">
+            <img
+              class="img_perfil"
+              src="photo2.png"
+              width="85px"
+              height="72px"
+              alt="Aliza Webber"
+            />
+            <div>
+              <p class="p1_perfil">Aliza Webber</p>
+              <p class="p2_perfil">Interior Designer</p>
+            </div>
+          </div>
+          <div>
             <p class="p3_perfil">Designed in 2020 by Aliza Webber</p>
-        </div>
+          </div>
         </div>
       </div>
-      
     </main>
     <footer class="footer">
       <p class="p_footer">
         Created By
-        <a class="" target="_blank" href="https://www.linkedin.com/in/alecson-ernandes-100b3416a/"
+        <a
+          class="alec"
+          target="_blank"
+          href="https://www.linkedin.com/in/alecson-ernandes-100b3416a/"
           >Alecson</a
-        > in 2023
+        >
+        in 2023
       </p>
     </footer>
 
     <script defer src="./js/script.js"></script>
+    
   </body>
 </html>

@@ -9,6 +9,8 @@ body{
     background-color: #181719;
     color: white;
     font-family: 'Montserrat';
+    width: 1400px;
+    margin: 0% auto;
     
 }
 .nav_bar{
@@ -38,17 +40,25 @@ body{
     
     
 }
-li > a::after{
-    content:"";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
+.nav_a::after{
+    display: block;
+    content: "";
     height: 3px;
     background-color: white;
     border-radius: 5px;
-    transform: scaleX(0);
+    transition:ease 0.2s;
+    width: 0;
     
+    
+}
+.nav_a:hover::after{
+    width: 100%;
+    left: 0; 
+}
+.nav_a:hover{
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 900;
+    font-weight: lighter;
 }
 .nav_p{
     padding: 1%;
@@ -59,8 +69,7 @@ li > a::after{
 }
 .main{
     display: flex;
-    margin-top: 120px;
-    gap:80px;
+    gap:20px;
     justify-content: center;
 }
 
@@ -68,6 +77,9 @@ li > a::after{
     padding-top: 200px;
     
  
+}
+.images{
+    max-width: 100%;
 }
 .h1{
     font-size: 48px;
@@ -190,10 +202,182 @@ a{
     text-decoration: none;
     cursor: pointer;
     color: white;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    
+    
     
 }
-@media(max-width:1440px){
+.btn_menu{
+    display: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+}
+.menu_mobile{
+    display:none;
+    position: absolute;
+    right:2rem;
+    top:60px;
+    height: 0;
+    width:300px;
+    background-color:#181719; 
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.menu_mobile.open {
+    height:500px;
+    width: 80%;
+    right: -65%;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+    z-index: 1;
+    
+    
+}
+.menu_mobile li{
+    padding: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width:768px){
+    main{  
+        padding: 0;
+        margin:0% 0%;
+        max-width: 100%; 
+        flex-wrap: wrap;
+        
+    }
+    .h1_p{
+        padding-top: 10px;
+        width: 80%;
+    }
+    .images{
+        padding-top: 10px;
+        width: 80%;
+
+
+    }
+    .h1{
+       font-size: 80px;
+       width:800px;
+       padding-left: 0px;
+    }
+    .main_text{
+        font-size: 30px;
+        width: 600px;
+        padding-left:0px;
+    }
+    .read_more{
+        padding-left: 0px;
+        margin-right: -10px;
+    }
+    .images{
+        width: 80%;
+        padding-left: 0;
+
+    }
+    .img1{
+        width: 1112px;
+        
+    }
+    .back{
+        margin-left: 80%;
+    }
+    .nav_bar .ul{
+        display: none;
+    }
+    .nav_bar .btn_menu{
+        display: block;
+
+    }
+    .menu_mobile{
+        display: block;
+        
+        
+    }    
+} 
+
+@media(max-width:425px){
     .main{
-        margin-right: 10%;
+        display: flex;
+        flex-direction: column;
+        gap:5%;
+        justify-content: center;
+        align-items: center;
+    }
+    .h1{
+        font-size: 125px;
+        margin: 0;
+        width: 100%;
+    }
+    .main_text{
+        width: 100%;
+        font-size:60px ;
+        margin: 0;
+    }
+    .read_more{
+        margin-top: 15%;
+    }
+    .img1{
+        margin-top: 15%;
+    }
+    .btn_menu{
+        padding-right: 1%;
+    }
+    
+    .menu_mobile.open{
+
+        position: absolute;
+        width: 1200px;
+        right: -196%;
+        height: 300%;
+    }
+   
+    .menu_mobile.open li{
+        
+       display: flex;
+       flex-direction: column;
+       flex-direction: initial; 
+    }
+    .menu_mobile.open li a{
+        font-size: 50px;
+        display: flex;
+        gap:10%;
+        
+    }
+    .back{
+        position: relative;
+        margin-left: 60%;
+    }
+    
+
+}
+@media(max-width:375px){
+
+    .menu_mobile.open{
+        right: -235%;
+        height: 300%;
     }
 }
+@media(max-width:320px){
+
+    .menu_mobile.open{
+
+        right: -285%;
+    }
+    .btn_menu{
+        padding-right: 4%;
+    }
+    .main{
+        margin-left: -3%;
+    }
+}
+
