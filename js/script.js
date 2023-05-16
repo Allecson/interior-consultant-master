@@ -6,7 +6,7 @@
         menuMobile.classList.toggle('open')
         const isOpen = menuMobile.classList.contains('open')
 
-        btnBarIcon;classList = isOpen
-        ? 'fa-solid fa-xmark'
+        btnBarIcon.classList = isOpen
+        ? 'fa-solid fa-xmark fa-beat'
         : 'fa-solid fa-bars'
       }
